@@ -14,7 +14,7 @@
 - `Parcerias`:Tem como finalidade, ter/fazer sociedade/parceria com clientes/amigos futuros.
 - `Fornecedores`: Tem como finalidade, prestador de materiais entre outros nos quais forem requistados.
   
-  <h4>✔️ Técnicas e tecnologias utilizadas</h4>
+  <h4 align="center">✔️ Técnicas e tecnologias utilizadas</h4>
 - `SQL`
 - `NODEJS`
 - `VSCODE`
