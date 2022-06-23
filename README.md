@@ -3,9 +3,7 @@
 </h4>
 <h1 align="center" style='font-family: Righteous'> Estúdio Seven - Estúdio de Tatuagem</h1>
 <img src="./src/view/img/bannerStudioSeven.png">
-<h4 align="center"
 
-</h4>
 ## :hammer: Funcionalidades do Projeto
 
 - `Funcionário`: Tem como finalidade alocação dos funcionários que atuam no estudio.
@@ -14,7 +12,7 @@
 - `Parcerias`:Tem como finalidade, ter/fazer sociedade/parceria com clientes/amigos futuros.
 - `Fornecedores`: Tem como finalidade, prestador de materiais entre outros nos quais forem requistados.
   
-  <h4 align="center">✔️ Técnicas e tecnologias utilizadas</h4>
+  <h4>✔️ Técnicas e tecnologias utilizadas</h4>
 - `SQL`
 - `NODEJS`
 - `VSCODE`
