@@ -1,5 +1,5 @@
 <h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
+    :construction: - - Projeto em construção - -  :construction:
 </h4>
 <h1 align="center" style='font-family: Righteous'> Estúdio Seven - Estúdio de Tatuagem</h1>
 <img src="./src/view/img/bannerStudioSeven.png">
