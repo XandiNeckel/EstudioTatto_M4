@@ -1,18 +1,19 @@
-import express, { json } from 'express';                  // atribuindo as var/const para utilização dos pacote/framework
-import morgan from 'morgan';
-import cors from 'cors';
-import { urlencoded } from 'body-parser';
-import {agenda} from  './src/AgendaController.js';
+import express from "express";
+import cors from "cors";
+import database from "./src/models/sqlite-db.js";
+import AgendaController from "./src/controllers/AgendaController.js";
+
 const app = express();
+app.use(express.json());
+app.use(cors());
 
-      //bibliotecas
-app.use(morgan('dev'));                              //toda a log de execução
-app.use(urlencoded({extend: false}));     //url enconded = propriety que é = false
-app.use(json()) ;                            // utilizado para determinar o tipo de dado que irá receber
-app.use(cors());                                     // cors recebe uma propriedade vazia
+IndexController(app);
+AgendaController(app, database);
 
-app.listen(3000, ()=> {                             //arrow function -  ligando o servidor
-    const newLocal = `Express started at http://localhost:3000`;
-    console.log(newLocal);
+
+app.listen(3001, ()=> {                             //arrow function -  ligando o servidor
+  const newLocal = `Express started at http://localhost:3001`;
+  console.log(newLocal);
 });
 
+export default app;
