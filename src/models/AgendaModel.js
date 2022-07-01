@@ -24,7 +24,7 @@ class AgendaModel {
     }
   };
   _validaDuracao = (duracao) => {
-    const duracoesValidas = [
+    const duracoesPermitidas = [
       "10",
       "20",
       "30",
@@ -35,7 +35,7 @@ class AgendaModel {
       "150",
       "180",
     ];
-    if (duracoesValidas.includes(duracao)) {
+    if (duracoesPermitidas.includes(duracao)) {
       return duracao;
     } else {
       throw new Error(
