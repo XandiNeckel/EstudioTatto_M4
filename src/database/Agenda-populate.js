@@ -39,7 +39,7 @@ function popularTabelaAgenda() {
     if (error) {
       if (
         error.message ===
-        "SQLITE: failed: AGENDA.ID"
+        "SQLITE: Failed: AGENDA.ID"
       ) {
         console.log("A tabela já foi preenchida\n");
       } else {
