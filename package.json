@@ -2,11 +2,12 @@
   "type": "module",
   "dependencies": {
     "dirname": "^0.1.0",
+    "express": "^4.18.1",
     "json": "^11.0.0",
     "nodemon": "^2.0.18",
     "ru": "^0.0.2",
     "run": "^1.4.0",
-    "start": "./index.js",
+    "start": "node ./index.js",
     "supertest": "^6.2.3",
     "verbose": "^0.2.3"
   }

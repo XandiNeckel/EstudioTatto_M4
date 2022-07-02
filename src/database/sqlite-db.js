@@ -12,11 +12,11 @@ const urlAPI = dirname(urlAPI(
   import.meta.url)) + "./database.db";
 const db = new sqlite3.Database(urlAPI);
 
-process.on("SIGINT", () =>
+process.on("FINISH", () =>
   db.close(() => {
     console.log(" BD finalizado!");
     process.exit(0);
   })
 );
 
-export default urlAPI;
+export default db;

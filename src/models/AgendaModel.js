@@ -1,4 +1,5 @@
 class AgendaModel {
+
   constructor(cliente_id, funcionario_id, data, hora, servico, duracao) {
     this.Cliente_ID = cliente_id;
     this.Funcionario_ID = funcionario_id;
@@ -7,6 +8,7 @@ class AgendaModel {
     this.Servico = servico;
     this.Duracao = this._validaDuracao(duracao);
   }
+
   _validaData = (data) => {
     if (data.length == 10 && data.indexOf("-") == 4) {
       return data;
@@ -16,6 +18,7 @@ class AgendaModel {
       );
     }
   };
+
   _validaHora = (hora) => {
     if (hora.indexOf(":" == 2)) {
       return hora;
@@ -23,6 +26,7 @@ class AgendaModel {
       throw new Error("Formato de hora inválido. O formato deve ser 'HH:MM'");
     }
   };
+
   _validaDuracao = (duracao) => {
     const duracoesPermitidas = [
       "10",
@@ -35,6 +39,7 @@ class AgendaModel {
       "150",
       "180",
     ];
+
     if (duracoesPermitidas.includes(duracao)) {
       return duracao;
     } else {

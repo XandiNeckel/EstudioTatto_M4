@@ -9,6 +9,4 @@ app.use(cors());
 
 AgendaController(app, database);
 
-
-
 export default app;
