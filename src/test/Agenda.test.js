@@ -9,21 +9,21 @@ describe("GET /Agenda", () => {
 });
 
 describe("GET /Agenda/cliente/:Cliente_ID", () => { //retorna os agendamentos do cliente solicitado
-  it("Retornar os agendamentos do cliente solicitado", async () => {
+  it("Retornar o agendamento do cliente solicitado", async () => {
     const resp = await request(app).get("/Agenda/cliente/2");
     expect(resp.statusCode).toEqual(200);
   });
 });
 
 describe("GET /Agenda/funcionario/:Funcionario_ID", () => {
-  it("Retornar os agendamentos do funcionario solicitado", async () => {
+  it("Retornar o agendamento do funcionario solicitado", async () => {
     const resp = await request(app).get("/Agenda/funcionario/2");
     expect(resp.statusCode).toEqual(200);
   });
 });
 
 describe("GET /Agenda/data/:Data", () => {
-  it("Retornar os agendamentos na data solicitada", async () => {
+  it("Retornar o agendamento na data solicitada", async () => {
     const resp = await request(app).get("/Agenda/data/2022-02-10");
     expect(resp.statusCode).toEqual(200);
   });
