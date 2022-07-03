@@ -14,7 +14,7 @@
 <h5>Passo 1:</h5>
 Clonando o repositório:
 
-Git-Clone: `https://github.com/XandiNeckel/EstudioTatto_M4.git`
+Git-Clone: https://github.com/XandiNeckel/EstudioTatto_M4.git
 <h5>Passo 2:</h5>
 Entrando na pasta:
 
@@ -30,12 +30,13 @@ Criando e populando banco de dados:
 Iniciando o servidor:
 `npm start`
 
-##📌 Rotas Implementadas
-####GET /Agenda
+## 📌 Rotas Implementadas
+### GET /Agenda
 Retorna todos os agendamentos já executados/realizados;
 
 Schema da resposta:
 
+```json
 {
 	"Agenda": [
         {
@@ -50,11 +51,15 @@ Schema da resposta:
 	],
 	"error": <boolean>
 }
-####GET /Agenda/Cliente/{Cliente_ID}
+```
+
+
+### GET /Agenda/Cliente/{Cliente_ID}
 Retorna todos os agendamentos de um determinado cliente.
 
 Schema da resposta:
 
+```json
 {
 	"Agenda": [
 		{
@@ -69,11 +74,14 @@ Schema da resposta:
 	],
 	"error": <boolean>
 }
-####GET /Agenda/Funcionario/{Funcionario_ID}
+```
+
+### GET /Agenda/Funcionario/{Funcionario_ID}
 Retorna todos os agendamentos de um determinado funcionario.
 
 Schema da resposta:
 
+```json
 {
 	"Agenda": [
 		{
@@ -88,11 +96,14 @@ Schema da resposta:
 	],
 	"error": <boolean>
 }
-####GET /Agenda/Data/{Data}
+```
+
+### GET /Agenda/Data/{Data}
 Retorna todos os agendamentos em uma determinada data (O formato para a data deve ser: "AAAA-MM-DD").
 
 Schema da resposta:
 
+```json
 {
 	"Agenda": [
 		{
@@ -107,11 +118,14 @@ Schema da resposta:
 	],
 	"error": <boolean>
 }
-####POST /Agenda
+```
+
+### POST /Agenda
 Insere/Acrescenta um novo agendamento no banco de dados.
 
 Schema da requisição:
 
+```json
 {
   "Cliente_ID": <number>,
   "Funcionario_ID": <number>,
@@ -120,8 +134,11 @@ Schema da requisição:
   "Servico": <string>,
   "Duracao": <number>
 }
+```
+
 Schema da resposta:
 
+```json
 {
 	"message": "Parabéns! Novo agendamento criado com sucesso. Data:{Data}, Hora:{Hora}",
   "Agenda": {
@@ -134,11 +151,14 @@ Schema da resposta:
 		},
 	"error": <boolean>
 }
-####PUT /Agenda/id/{ID}
+```
+
+### PUT /Agenda/id/{ID}
 Atualiza/Altera um determinado agendamento no banco de dados.
 
 Schema da requisição:
 
+```json
 {
   "Cliente_ID": <number>,
   "Funcionario_ID": <number>,
@@ -147,7 +167,11 @@ Schema da requisição:
   "Servico": <string>,
   "Duracao": <number>
 }
+```
+
 Schema da resposta:
+
+```json
 
 {
   "Message": "Parabéns! Agendamento de ID {ID} atualizado com sucesso",
@@ -161,15 +185,19 @@ Schema da resposta:
   },
   "error": <boolean>
 }
-####DELETE /Agenda/id/{ID}
+```
+
+### DELETE /Agenda/id/{ID}
 Deleta um determinado agendamento do banco de dados.
 
 Schema da resposta:
 
+```json
 {
     "Agenda": "Parabéns! Agendamento de ID {ID} deletado com sucesso",
     "error": <boolean>
 }
+```
 
 ## :hammer: Funcionalidades do Projeto:
 
