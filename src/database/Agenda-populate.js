@@ -3,11 +3,11 @@ import { // retorna um método que está vinculado ao caminho fornecido.
   dirname // informa o caminho absoluto do diretório que contém o arquivo em execução no momento
 } from "path"; // Um caminho.
 import {
-  UrlAPI
+  fileURLToPath
 } from "url";
 sqlite3.verbose(); // Resiliência de reconexão: as mensagens são armazenadas em buffer para retransmissão, se necessária
 
-const filePath = dirname(UrlAPI(
+const filePath = dirname(fileURLToPath(
   import.meta.url)) + "/database.db";
 const db = new sqlite3.Database(filePath);
 
