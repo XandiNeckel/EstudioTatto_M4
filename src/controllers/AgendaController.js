@@ -104,12 +104,12 @@ const AgendaController = (app, bd) => {
     const body = req.body;
     try {
       const atualizacao = new AgendaModel(
-        body.Cliente_ID,
-        body.Funcionario_ID,
-        body.Data,
-        body.Hora,
-        body.Servico,
-        body.Duracao
+        body.Cliente_ID,                  // identificação cliente
+        body.Funcionario_ID,              // funcionario que irá prestar o serviço
+        body.Data,                        //data do serviço
+        body.Hora,                        //horario do serviço
+        body.Servico,                     // serviço, tam,valor etc.
+        body.Duracao                      //duração do serviço/tato
       );
       const checarDisponibilidade = await agendaDAO.checarDisponibilidade(
         atualizacao

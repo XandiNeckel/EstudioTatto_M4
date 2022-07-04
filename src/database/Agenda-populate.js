@@ -11,21 +11,21 @@ const filePath = dirname(fileURLToPath(
   import.meta.url)) + "/database.db";
 const db = new sqlite3.Database(filePath);
 
-const AGENDA_SCHEMA = `CREATE TABLE IF NOT EXISTS "AGENDA" (
-    "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "Cliente_ID" integer,
-    "Funcionario_ID" integer,
-    "Data" text,
-    "Hora" datetime,
-    "Servico" text,
-    "Duracao" text
+const AGENDA_SCHEMA = `CREATE TABLE IF NOT EXISTS AGENDA (
+    ID integer PRIMARY KEY AUTOINCREMENT,
+    Cliente_ID integer,
+    Funcionario_ID integer,
+    Data text,
+    Hora datetime,
+    Servico text,
+    Duracao text
 )`;
 
 const ADD_AGENDA_DATA = `INSERT INTO AGENDA
 (ID, Cliente_ID, Funcionario_ID, Data, Hora, Servico, Duracao) VALUES 
-(2, 2, 1, "2022-02-10", "14:00:00","Novo: Tatuagem da medusa - mitologia", "120"),
-(5, 2, 3, "2022-05-08", "18:30:00","Novo: Tatuagem de um Anão com cogumelo", "90"),
-(9, 8, 3, "2022-06-20", "17:30:00","Novo: Tatuagem de um unicornio", "90")`
+(2, 2, 1, "2022-02-10", "2022-02-10 14:00:00","Novo: Tatuagem da medusa - mitologia", "120"),
+(5, 2, 3, "2022-05-08", "2022-05-08 18:30:00","Novo: Tatuagem de um Anão com cogumelo", "90"),
+(9, 8, 3, "2022-06-20", "2022-06-20 17:30:00","Novo: Tatuagem de um unicornio", "90")`
 
 function criarTabelaAgenda() {
   db.run(AGENDA_SCHEMA, (error) => {

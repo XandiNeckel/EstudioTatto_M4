@@ -387,8 +387,8 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "test": "start",
-    "start": "node server.js"
+    "test": "",
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
