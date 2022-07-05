@@ -1,12 +1,12 @@
-class ColaboradoresDAO {
+export class ColaboradoresDAO {
     constructor(bd) {
         this.bd = bd;
     }
 
     inserirColaborador(novoColaborador){
         return new Promise((resolve, reject) => {
-            this.bd.run(`INSERT INTO RESERVAS (ID_COLABORADOR, NOME, CNPJ, FUNCAO, TELEFONE, EMAIL, ENDEREÇO) VALUES (?,?,?,?,?,?,?)`, 
-            [novoColaborador.id_colaborador, novoColaborador.nome, novoColaborador.cnpj, novoColaborador.funcao, novoColaborador.telefone, novoColaborador.email, novoColaborador.endereco],
+            this.bd.run(`INSERT INTO RESERVAS (NOME, CNPJ, FUNCAO, TELEFONE, EMAIL, ENDEREÇO) VALUES (?,?,?,?,?,?)`, 
+            [colaborador.id, novoColaborador.nome, novoColaborador.cnpj, novoColaborador.funcao, novoColaborador.telefone, novoColaborador.email, novoColaborador.endereco],
             (erro) => {
                 if (erro) {
                     console.log('reject');
@@ -31,7 +31,7 @@ class ColaboradoresDAO {
         })
     }
 
-    listarColaborador(id){
+    listarColaboradorid(id){
         return new Promise((resolve, reject) => {
             this.bd.all(`SELECT * FROM COLABORADORES WHERE ID_COLABORADOR = ?`, [id], (erro, rows) => {
                 if (erro) {
@@ -45,7 +45,7 @@ class ColaboradoresDAO {
 
     alterarColaborador(novoColaborador){
         return new Promise((resolve, reject) => {
-            this.bd.run(`UPDATE COLABORADORES SET ID_COLABORADOR = ?, NOME = ?, CNPJ = ?, FUNCAO = ?, TELEFONE = ?, EMAIL = ?, ENDEREÇO = ? WHERE ID_COLABORADOR = ?`, novoColaborador, (erro) => {
+            this.bd.run(`UPDATE COLABORADORES SET NOME = ?, CNPJ = ?, FUNCAO = ?, TELEFONE = ?, EMAIL = ?, ENDEREÇO = ? WHERE ID_COLABORADOR = ?`, novoColaborador, (erro) => {
                 if (erro) {
                     reject("Erro ao atualizar o cadastro", erro)
                 } else {
@@ -66,5 +66,3 @@ class ColaboradoresDAO {
         })
     }
 }
-
-export {ColaboradoresDAO}
