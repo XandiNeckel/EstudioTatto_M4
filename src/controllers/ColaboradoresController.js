@@ -1,6 +1,6 @@
-import {Colaboradores} from '../models/ColaboradoresModel.js';
-import {bd} from '../database/sqlite-db.js';
-import {ColaboradoresDAO} from "../DAO/ColaboradoresDAO.js";
+import Colaboradores from '../models/ColaboradoresModel.js';
+import bd from '../database/sqlite-db.js';
+import ColaboradoresDAO from "../DAO/ColaboradoresDAO.js";
 
 const colaboradores = (app) => {
     //DAO
