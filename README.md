@@ -1,5 +1,5 @@
 <h4 align="center"> 
-    :construction: - - Projeto API - Estúdio Tatto - -  :construction:
+    :construction: < Projeto API - Estúdio Tatto />  :construction:
 </h4>
 <h1 align="center" style='font-family: Righteous'> Estúdio Seven - Estúdio de Tatuagem ✒️</h1>
 <img src="./src/assets/img/bannerStudioSeven.png">
@@ -9,26 +9,32 @@
 
 <h3>💻 Instalação Da Aplicação</h3>
 
+
 <h5>Passo 1:</h5> Abra o Terminal->Powershell e rode os comandos abaixo:⬇
 
-<h5>Passo 1:</h5>
+<h5>Passo 2:</h5>
 Clonando o repositório:
 
 Git-Clone: https://github.com/XandiNeckel/EstudioTatto_M4.git
-<h5>Passo 2:</h5>
+<h5>Passo 3:</h5>
 Entrando na pasta:
 
  `cd Projeto_M4`
-<h5>Passo 3:</h5>
+<h5>Passo 4:</h5>
 Instalando os pacotes necessários:
 
 `npm install`
-<h5>Passo 4:</h5>
+<h5>Passo 5:</h5>
 Criando e populando banco de dados:
 
 `npm run database`
-Iniciando o servidor:
+
+<h5> Passo 6 </h5>
+Iniciando o servidor e rodando o .test:
+
 `npm start`
+
+`npm run test`
 
 ## 📌 Rotas Implementadas
 ### GET /Agenda
@@ -217,6 +223,7 @@ Schema da resposta:
 - `NODEMON`
 - `JSON`
 ##     👨🏻‍💻 Autores  ##
+
 
 | [<img src="./src/assets/img/perfil_aleneckel.jpg" width=115><br><sub> Alexandre Neckel</sub>](https://github.com/XandiNeckel) |  [<img src=".//src/assets/img/perfil_dani.jpg" width=115><br><sub>Danielys Davila</sub>](https://github.com/Danielysdavils) |  [<img src="./src/assets/img/perfil_thay.jpg" width=115><br><sub>Thaynara</sub>](https://github.com/Thaynara108310) |
 | :---: | :---: | :---:
