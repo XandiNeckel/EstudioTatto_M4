@@ -2,7 +2,8 @@ import Colaboradores from '../models/ColaboradoresModel.js';
 import bd from '../database/sqlite-db.js';
 import ColaboradoresDAO from "../DAO/ColaboradoresDAO.js";
 
-const colaboradores = (app) => {
+
+const colaboradores = (app, bd) => {
     //DAO
     const DadosDAO = new ColaboradoresDAO(bd) 
 
@@ -17,7 +18,7 @@ const colaboradores = (app) => {
     })
     //Rota GET que puxa todas as reservas
     app.get('/colaboradores', (req, res) => {
-        DadosDAO.listarColaboradores()
+        DadosDAO.listarColaborador()
         .then((result) => {
             res.json(result)
         }).catch((err) => {res.send(err)})
@@ -25,7 +26,7 @@ const colaboradores = (app) => {
     //Rota GET que puxa por id
     app.get('/colaboradores/:id', (req, res) => {
         const id = req.params.id;
-        DadosDAO.listarColaboradores(id)
+        DadosDAO.listarColaboradorid(id)
         .then((result) => {
             res.json(result)
         }).catch((err) => {res.send(err)})
@@ -34,9 +35,8 @@ const colaboradores = (app) => {
     app.put('/colaboradores/:id', (req, res) => {
         const body = req.body
         const id = req.params.id;
-        const reservaAlt = DadosDAO.listarColabores(id);
+        const reservaAlt = DadosDAO.listarColabor(id);
         const dadosNovos = new Colaboradores(
-            body.id_colaborador || reservaAlt.id_colaborador, 
             body.nome || reservaAlt.nome, 
             body.cnpj || reservaAlt.cnpj, 
             body.funcao || reservaAlt.funcao, 
