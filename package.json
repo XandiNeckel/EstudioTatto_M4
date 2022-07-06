@@ -237,7 +237,6 @@
     "node-fetch": "^2.6.7",
     "node-gyp": "^8.4.1",
     "node-uuid": "^1.4.8",
-    "nodemon": "^1.19.4",
     "nopt": "^1.0.10",
     "normalize-path": "^3.0.0",
     "npm-run-path": "^2.0.2",
@@ -399,5 +398,8 @@
   "bugs": {
     "url": "https://github.com/XandiNeckel/EstudioTatto_M4/issues"
   },
-  "homepage": "https://github.com/XandiNeckel/EstudioTatto_M4#readme"
+  "homepage": "https://github.com/XandiNeckel/EstudioTatto_M4#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }

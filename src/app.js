@@ -7,6 +7,9 @@ import {fornecedor} from './controllers/FornecedorController.js';
 
 import {colaboradores} from "./controllers/ColaboradoresController.js";
 
+import {cliente} from "./controllers/ClienteController.js"
+
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -16,4 +19,5 @@ fornecedor(app, database);
 
 colaboradores(app, database);
 
+cliente(app, database);
 export default app;
