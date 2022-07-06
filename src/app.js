@@ -16,8 +16,7 @@ app.use(cors());
 
 AgendaController(app, database);
 fornecedor(app, database);
-
 colaboradores(app, database);
-
 cliente(app, database);
+
 export default app;
