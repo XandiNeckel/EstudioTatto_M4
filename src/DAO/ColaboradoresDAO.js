@@ -1,4 +1,4 @@
-export class ColaboradoresDAO {
+class ColaboradoresDAO {
     constructor(bd) {
         this.bd = bd;
     }
@@ -66,3 +66,5 @@ export class ColaboradoresDAO {
         })
     }
 }
+
+export default ColaboradoresDAO;

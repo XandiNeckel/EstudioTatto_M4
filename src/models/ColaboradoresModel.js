@@ -9,4 +9,4 @@ class Colaboradores {
     }
 }
 
-export {Colaboradores}
+export default Colaboradores;
